@@ -5,6 +5,8 @@
 //  Created by 遠藤拓弥 on 2025/03/09.
 //
 
+import SwiftUI
+
 
 // 円形表示ビュー
 struct CircularView: View {
