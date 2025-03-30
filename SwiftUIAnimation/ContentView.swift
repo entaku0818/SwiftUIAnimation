@@ -9,13 +9,35 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            // 基本的ないいねアニメーション
+            VStack(spacing: 30) {
+                Text("シンプルないいねアニメーション")
+                    .font(.headline)
+                LikeButtonView()
+                
+                Text("タップしてみてください")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+            }
+            .tabItem {
+                Label("シンプル", systemImage: "heart")
+            }
+            
+            // 豪華ないいねアニメーション
+            VStack(spacing: 30) {
+                Text("豪華ないいねアニメーション")
+                    .font(.headline)
+                FancyLikeButtonView()
+                
+                Text("タップしてみてください")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+            }
+            .tabItem {
+                Label("豪華", systemImage: "heart.fill")
+            }
         }
-        .padding()
     }
 }
 
