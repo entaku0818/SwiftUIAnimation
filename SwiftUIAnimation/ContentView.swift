@@ -37,6 +37,12 @@ struct ContentView: View {
             .tabItem {
                 Label("豪華", systemImage: "heart.fill")
             }
+            
+            // サウンドアニメーションデモ
+            SoundDemoView()
+                .tabItem {
+                    Label("サウンド", systemImage: "music.note")
+                }
         }
     }
 }
